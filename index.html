@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/webp" href="/favicon.webp"><meta name="generator" content="Astro v5.13.7"><title>Calculadora Bayer</title><link rel="stylesheet" href="/_astro/index.Cu2xjzbA.css"></head> <body>  <main class="min-h-screen min-w-full"> <div id="medical-modal" class="modal-overlay" data-astro-cid-qmzm2soj> <div class="modal-container" data-astro-cid-qmzm2soj> <div class="modal-content" data-astro-cid-qmzm2soj> <!-- Icono de advertencia --> <div class="warning-icon" data-astro-cid-qmzm2soj> <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-qmzm2soj> <circle cx="30" cy="30" r="30" fill="#10384f" data-astro-cid-qmzm2soj></circle> <path d="M30 18v16M30 40v4" stroke="white" stroke-width="4" stroke-linecap="round" data-astro-cid-qmzm2soj></path> </svg> </div> <!-- Título --> <h2 class="modal-title" data-astro-cid-qmzm2soj>¡Atención!</h2> <!-- Contenido del mensaje --> <div class="modal-text" data-astro-cid-qmzm2soj> <p data-astro-cid-qmzm2soj>
+Esta aplicación está diseñada exclusivamente para
+                    profesionales de la salud y no recopila datos
+                    personales, solamente es una herramienta para
+                    calcular el riesgo renal en paciente diabético de
+                    acuerdo a las escalas y guías internacionales
+                    (KDIGO). No debe emplearse para diagnósticos o
+                    tratamientos médicos. Si usted no es un
+                    profesional de la salud, agradecemos no continuar
+                    al sitio y consultar a un especialista médico para el
+                    diagnóstico adecuado. Al utilizar este sitio, usted
+                    libera a Bayer<sup data-astro-cid-qmzm2soj>®</sup> de toda responsabilidad
+                    relacionada a su uso.
+</p> </div> <!-- Botones de acción --> <div class="modal-buttons" data-astro-cid-qmzm2soj> <button id="modal-accept-btn" class="accept-button" data-astro-cid-qmzm2soj>
+OK
+</button> </div> </div> </div> </div>  <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("medical-modal"),a=document.getElementById("modal-accept-btn");a&&e&&a.addEventListener("click",function(){localStorage.setItem("bayer-disclaimer-accepted","true"),localStorage.setItem("bayer-disclaimer-date",new Date().toISOString()),e.style.opacity="0",e.style.transform="translateY(-40px) scale(0.9)",setTimeout(()=>{e.classList.add("hidden"),document.body.classList.remove("modal-open")},400)}),e?.addEventListener("click",function(t){if(t.target===e)return!1}),document.addEventListener("keydown",function(t){if(t.key==="Escape"&&!e?.classList.contains("hidden"))return t.preventDefault(),!1}),window.resetDisclaimer=function(){localStorage.removeItem("bayer-disclaimer-accepted"),localStorage.removeItem("bayer-disclaimer-date"),location.reload()}});</script> <div data-astro-cid-7f5jotnd> <header class="flex items-start py-10" data-astro-cid-7f5jotnd> <div class="w-fit" data-astro-cid-7f5jotnd> <img src="/_astro/CImage.Cbo7T7rC_Z2vQRds.webp" alt="Lines" data-astro-cid-7f5jotnd="true" loading="lazy" decoding="async" fetchpriority="auto" width="100" height="63" class="object-contain w-[40px] xl:w-[50px] 2xl:w-[80px]"> </div> <h1 class="relative font-helvetica-bold text-[#ff3162] text-3xl lg:text-5xl 2xl:text-6xl 2xl:ml-60" data-astro-cid-7f5jotnd>
+Calculadora <br data-astro-cid-7f5jotnd>
+de riesgo renal <br data-astro-cid-7f5jotnd>
+en paciente con DT2
+</h1> </header> <div class="flex flex-col gap-y-4 px-8 lg:flex-row lg:gap-x-6 xl:px-16 2xl:px-80" data-astro-cid-7f5jotnd> <div class="flex flex-col gap-y-4 lg:w-1/2 lg:justify-between" data-astro-cid-beku6uhb> <div class="flex gap-y-4 flex-col" data-astro-cid-beku6uhb> <h2 class="text-2xl text-center font-helvetica-bold text-[#ff3162] lg:text-left xl:text-3xl 2xl:text-4xl" data-astro-cid-beku6uhb>
+Cálculo de TFGe
+</h2> <div class="flex flex-col items-center gap-y-2 lg:flex-row lg:gap-x-4" data-astro-cid-beku6uhb> <label for="creatinina" class="gradient-label text-white font-helvetica-bold justify-center py-4 w-full text-left pl-3 lg:py-2 lg:text-xs xl:text-base 2xl:text-xl" style="clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);" data-astro-cid-beku6uhb>1. ¿Cuál es la creatinina sérica (mg/dL)?</label> <input type="number" step="0.01" id="creatinina" class="w-[60%] text-black p-1.5 bg-[#63666a]/20 rounded-lg text-center font-helvetica-regular 2xl:text-xl" placeholder="0,0" data-astro-cid-beku6uhb> </div> <div class="flex flex-col items-center gap-y-2 lg:flex-row lg:gap-x-4" data-astro-cid-beku6uhb> <label for="edad" class="gradient-label text-white font-helvetica-bold justify-center py-4 w-full text-left pl-3 lg:py-2 lg:text-xs xl:text-base 2xl:text-xl" style="clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);" data-astro-cid-beku6uhb>2. ¿Cuál es la edad del paciente (años)?</label> <input type="number" id="edad" class="w-[60%] text-black p-1.5 bg-[#63666a]/20 rounded-lg text-center font-helvetica-regular 2xl:text-xl" placeholder="0" data-astro-cid-beku6uhb> </div> <div class="flex flex-col items-center gap-y-2 lg:flex-row lg:gap-x-4" data-astro-cid-beku6uhb> <label for="genero" class="gradient-label text-white font-helvetica-bold justify-center py-4 w-full text-left pl-3 lg:py-2 lg:text-xs xl:text-base 2xl:text-xl" style="clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);" data-astro-cid-beku6uhb>3. ¿Cuál es el género del paciente (M/F)?</label> <select id="genero" class="w-[60%] text-black p-1.5 bg-[#63666a]/20 rounded-lg text-center font-helvetica-regular 2xl:text-xl" data-astro-cid-beku6uhb> <option value="" disabled selected data-astro-cid-beku6uhb>Seleccione</option> <option value="M" data-astro-cid-beku6uhb>Masculino</option> <option value="F" data-astro-cid-beku6uhb>Femenino</option> </select> </div> </div> <div class="flex gap-y-4 flex-col" data-astro-cid-beku6uhb> <div class="mt-2 flex flex-col items-center gap-y-2 lg:flex-row" data-astro-cid-beku6uhb> <div class="red-gradient-label text-white text-2xl font-helvetica-bold justify-center py-2 w-full text-center rounded-tl-xl rounded-bl-xl" style="clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);" data-astro-cid-beku6uhb>
+TFGe:
+</div> <div id="tfge" class="w-[60%] text-[#ff3162] text-center font-helvetica-regular" data-astro-cid-beku6uhb> <span class="font-helvetica-bold text-3xl 2xl:text-4xl" id="tfge-valor" data-astro-cid-beku6uhb>0
+</span>mL/min/1.73m²
+</div> </div> <div class="text-center text-sm font-helvetica-regular flex flex-col lg:flex-row lg:gap-x-2 lg:text-[10px]" data-astro-cid-beku6uhb>
+&nbsp;
+</div> </div> </div>  <script type="module">function a(){const o=document.getElementById("creatinina"),d=document.getElementById("edad"),c=document.getElementById("genero"),t=document.getElementById("tfge-valor");if(!o||!d||!c||!t)return;const n=parseFloat(o.value),i=parseInt(d.value),e=(c.value||"").toUpperCase();let r=e==="F"?.7:.9,l=-.241,s=e==="F"?1.012:1;if(isNaN(n)||isNaN(i)||e!=="M"&&e!=="F"){t.textContent="0";return}const m=Math.min(n/r,1),p=Math.max(n/r,1),u=142*Math.pow(m,l)*Math.pow(p,-1.2)*Math.pow(.9938,i)*s;t.textContent=u.toFixed(0),window.dispatchEvent(new CustomEvent("tfgeCalculated",{detail:{tfge:u}}))}document.addEventListener("DOMContentLoaded",function(){document.getElementById("creatinina")?.addEventListener("input",a),document.getElementById("edad")?.addEventListener("input",a),document.getElementById("genero")?.addEventListener("input",a)});</script> <hr class="separator" data-astro-cid-7f5jotnd> <div class="flex flex-col gap-y-4 lg:w-1/2 lg:justify-between" data-astro-cid-ud2jplhd> <div class="flex gap-y-4 flex-col" data-astro-cid-ud2jplhd> <h2 class="text-2xl text-center font-helvetica-bold text-[#ff3162] lg:text-left xl:text-3xl 2xl:text-4xl" data-astro-cid-ud2jplhd>
+Cálculo de RAC
+</h2> <div class="flex flex-col items-center gap-y-2 lg:flex-row lg:gap-x-4" data-astro-cid-ud2jplhd> <label for="albumina" class="gradient-label text-white font-helvetica-bold justify-center py-4 w-full text-left pl-3 lg:py-2 lg:text-xs xl:text-base 2xl:text-xl" style="clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);" data-astro-cid-ud2jplhd>1. ¿Cuál es la albúmina en orina (mg/L)?</label> <input type="number" step="0.01" id="albumina" class="w-[60%] text-black p-1.5 bg-[#63666a]/20 rounded-lg text-center font-helvetica-regular 2xl:text-xl" placeholder="0" data-astro-cid-ud2jplhd> </div> <div class="flex flex-col items-center gap-y-2 lg:flex-row lg:gap-x-4" data-astro-cid-ud2jplhd> <label for="orina" class="gradient-label text-white font-helvetica-bold justify-center py-4 w-full text-left pl-3 lg:py-2 lg:text-xs xl:text-base 2xl:text-xl" style="clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);" data-astro-cid-ud2jplhd>2. ¿Cuál es la creatinina en orina(mg/dl)?</label> <input type="number" step="0.01" id="orina" class="w-[60%] text-black p-1.5 bg-[#63666a]/20 rounded-lg text-center font-helvetica-regular 2xl:text-xl" placeholder="0,0" data-astro-cid-ud2jplhd> </div> </div> <div class="flex gap-y-4 flex-col" data-astro-cid-ud2jplhd> <div class="mt-2 flex flex-col items-center gap-y-2 lg:flex-row" data-astro-cid-ud2jplhd> <div class="blue-gradient-label text-white text-2xl font-helvetica-bold justify-center py-2 w-full text-center pl-3 rounded-tl-xl rounded-bl-xl" style="clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);" data-astro-cid-ud2jplhd>
+RAC:
+</div> <div id="rac-valor" class="w-[30%] text-[#10384f] text-center font-helvetica-regular" data-astro-cid-ud2jplhd> <span class="font-helvetica-bold text-3xl 2xl:text-4xl" data-astro-cid-ud2jplhd>0 </span>mg/g
+</div> </div> <div class="text-center text-sm font-helvetica-regular flex flex-col lg:flex-row lg:gap-x-2 lg:text-[10px]  2xl:text-sm" data-astro-cid-ud2jplhd> <p data-astro-cid-ud2jplhd> <strong class="font-helvetica-bold" data-astro-cid-ud2jplhd>RAC:</strong> relación albúina/cretina;
+</p> <p data-astro-cid-ud2jplhd> <strong class="font-helvetica-bold" data-astro-cid-ud2jplhd>TFGe:</strong> tasa de filtración
+                glomerural estimada
+</p> </div> </div> </div>  <script type="module">function c(){const e=document.getElementById("albumina"),a=document.getElementById("orina"),i=document.getElementById("rac-valor");if(!e||!a||!i)return;const o=parseFloat(e.value),n=parseFloat(a.value);let t=0;!isNaN(o)&&!isNaN(n)&&n!==0&&(t=o/n*100),i.innerHTML=`<span class='font-helvetica-bold text-3xl'>${t.toFixed(0)}</span>mg/g`,window.dispatchEvent(new CustomEvent("racCalculated",{detail:{rac:t}}))}document.addEventListener("DOMContentLoaded",function(){document.getElementById("albumina")?.addEventListener("input",c),document.getElementById("orina")?.addEventListener("input",c)});</script> <hr class="separator" data-astro-cid-7f5jotnd> </div> <h2 class="text-2xl text-[#10384f] left font-helvetica-bold pl-8 mt-6 lg:text-4xl xl:pl-16 2xl:pl-80 2xl:text-4xl" data-astro-cid-7f5jotnd>
+Categorización de riesgo
+<br data-astro-cid-7f5jotnd> por guías <span class="text-[#ff3162]" data-astro-cid-7f5jotnd>KDIGO</span> </h2> <div class="px-8 mt-4 flex gap-y-6 flex-col lg:flex-row xl:px-16 2xl:px-80" data-astro-cid-7f5jotnd> <div class="flex flex-col gap-y-4 lg:w-[45%] lg:gap-y-0"> <div class="font-helvetica-regular text-[#63666a] text-center text-sm lg:h-[160px] lg:flex lg:items-center xl:text-base xl:h-[195px] 2xl:h-[230px]"> <p class="w-full 2xl:text-lg"> <strong class="font-helvetica-bold">CKD se clasifica en función de:</strong> <br>
+Causa (C) <br>
+TFGe (G) <br>
+Albuminuria (A)
+</p> </div> <div class="flex lg:h-[250px] xl:h-[285px] 2xl:h-[380px]"> <div class="w-[40%] px-2 bg-[#63666a] text-white text-sm text-center font-helvetica-bold flex items-center xl:text-base 2xl:text-lg">
+Categorías de TFGe (ml/min/1,73 m2) Descripción y rango
+</div> <div class="w-[60%] text-xs text-[#63666a] font-helvetica-bold flex flex-col justify-between"> <div class="py-2 px-2 text-center border-[#63666a80] border-b-[1px] flex justify-between items-center lg:h-[41px] xl:text-base 2xl:text-lg 2xl:h-[60px]">  <p>G1</p> <p>Normal o alto</p> <p>≥90</p>  </div> <div class="py-2 px-2 text-center border-[#63666a80] border-b-[1px] flex justify-between items-center lg:h-[41px] xl:text-base 2xl:text-lg 2xl:h-[60px]">  <p>G2</p> <p>Disminución ligera</p> <p>60-89</p>  </div> <div class="py-2 px-2 text-center border-[#63666a80] border-b-[1px] flex justify-between items-center lg:h-[41px] xl:text-base 2xl:text-lg 2xl:h-[60px]">  <p>G3</p> <p>Disminución <br> leve-moderada</p> <p>45-59</p>  </div> <div class="py-2 px-2 text-center border-[#63666a80] border-b-[1px] flex justify-between items-center lg:h-[41px] xl:text-base 2xl:text-lg 2xl:h-[60px]">  <p>G3b</p> <p>Disminución <br> moderada a severa</p> <p>30-44</p>  </div> <div class="py-2 px-2 text-center border-[#63666a80] border-b-[1px] flex justify-between items-center lg:h-[41px] xl:text-base 2xl:text-lg 2xl:h-[60px]">  <p>G4</p> <p>Disminución severa</p> <p>15-29</p>  </div> <div class="py-2 px-2 text-center border-[#63666a80] border-b-[1px] flex justify-between items-center lg:h-[41px] xl:text-base 2xl:text-lg 2xl:h-[60px]">  <p>G5</p> <p>Insuficiencia renal</p> <p>&lt;15</p>  </div> </div> </div> <p class="font-helvetica-regular text-[#63666a] text-left text-xs lg:text-[10px] lg:mt-4 xl:text-sm"> <strong class="font-helvetica-bold">TFGe:</strong> tasa de filtración glomerular
+        estimada.
+</p> </div> <div class="flex gap-y-2 flex-col lg:gap-y-0 lg:w-[55%] lg:justify-between" data-astro-cid-mhkapny5> <div class="lg:h-[160px] xl:h-[195px] 2xl:h-[230px]" data-astro-cid-mhkapny5> <p class="p-2 font-helvetica-bold text-white text-center text-sm bg-[#d50032] xl:text-base 2xl:text-lg" data-astro-cid-mhkapny5>
+Categorías de albuminuria <br data-astro-cid-mhkapny5>
+Descripción y rango (mg albúmina/g creatinina)
+</p> <div class="grid grid-cols-3 2xl:h-[72%]" data-astro-cid-mhkapny5> <p class="py-2 font-helvetica-bold text-xs text-center text-[#63666a] border-b-[1px] border-[#63666a80] xl:text-base 2xl:text-lg" data-astro-cid-mhkapny5>
+A1 <br data-astro-cid-mhkapny5>
+Aumento normal a ligero
+</p> <p class="py-2 font-helvetica-bold text-xs text-center text-[#63666a] border-b-[1px] border-[#63666a80] xl:text-base 2xl:text-lg" data-astro-cid-mhkapny5>
+A2 <br data-astro-cid-mhkapny5>
+Incremento moderado
+</p> <p class="py-2 font-helvetica-bold text-xs text-center text-[#63666a] border-b-[1px] border-[#63666a80] xl:text-base 2xl:text-lg" data-astro-cid-mhkapny5>
+A3 <br data-astro-cid-mhkapny5>
+Incremento severo
+</p> <p class="py-2 font-helvetica-bold text-xs text-center text-[#63666a] xl:text-base 2xl:text-lg" data-astro-cid-mhkapny5>
+&lt;30 mg/g <br data-astro-cid-mhkapny5>
+&lt;3  mg/mmol
+</p> <p class="py-2 font-helvetica-bold text-xs text-center text-[#63666a] xl:text-base 2xl:text-lg" data-astro-cid-mhkapny5>
+30-299 mg/g <br data-astro-cid-mhkapny5>
+3-29  mg/mmol
+</p> <p class="py-2 font-helvetica-bold text-xs text-center text-[#63666a] xl:text-base 2xl:text-lg" data-astro-cid-mhkapny5>
+≥300 mg/g <br data-astro-cid-mhkapny5>
+≥30  mg/mmol
+</p> </div> </div> <div class="flex w-full overflow-x-scroll lg:overflow-x-hidden lg:h-[250px] xl:h-[285px] 2xl:h-[380px]" data-astro-cid-mhkapny5> <table id="table" data-astro-cid-mhkapny5> <tr data-astro-cid-mhkapny5> <td rowspan="6" class="header-cell" data-astro-cid-mhkapny5> <div data-astro-cid-mhkapny5>
+Categorías de TFGe<br data-astro-cid-mhkapny5>
+(ml/min/1,73 m2)<br data-astro-cid-mhkapny5>
+Descripción y rango
+</div> </td> <td class="category-cell" data-astro-cid-mhkapny5>G1</td> <td class="description-cell" data-astro-cid-mhkapny5>Normal o alto</td> <td class="range-cell" data-astro-cid-mhkapny5>≥90</td> <td class="status-cell green" data-astro-cid-mhkapny5>--</td> <td class="status-cell yellow" data-astro-cid-mhkapny5>--</td> <td class="status-cell orange" data-astro-cid-mhkapny5>--</td> </tr> <tr data-astro-cid-mhkapny5> <td class="category-cell" data-astro-cid-mhkapny5>G2</td> <td class="description-cell" data-astro-cid-mhkapny5>Disminución ligera</td> <td class="range-cell" data-astro-cid-mhkapny5>60-89</td> <td class="status-cell patient-here" data-astro-cid-mhkapny5>--</td> <td class="status-cell yellow" data-astro-cid-mhkapny5>--</td> <td class="status-cell orange" data-astro-cid-mhkapny5>--</td> </tr> <tr data-astro-cid-mhkapny5> <td class="category-cell" data-astro-cid-mhkapny5>G3a</td> <td class="description-cell" data-astro-cid-mhkapny5>Disminución<br data-astro-cid-mhkapny5>leve-moderada</td> <td class="range-cell" data-astro-cid-mhkapny5>45-59</td> <td class="status-cell yellow" data-astro-cid-mhkapny5>--</td> <td class="status-cell orange" data-astro-cid-mhkapny5>--</td> <td class="status-cell red" data-astro-cid-mhkapny5>--</td> </tr> <tr data-astro-cid-mhkapny5> <td class="category-cell" data-astro-cid-mhkapny5>G3b</td> <td class="description-cell" data-astro-cid-mhkapny5>Disminución<br data-astro-cid-mhkapny5>moderada a severa</td> <td class="range-cell" data-astro-cid-mhkapny5>30-44</td> <td class="status-cell orange" data-astro-cid-mhkapny5>--</td> <td class="status-cell red" data-astro-cid-mhkapny5>--</td> <td class="status-cell red" data-astro-cid-mhkapny5>--</td> </tr> <tr data-astro-cid-mhkapny5> <td class="category-cell" data-astro-cid-mhkapny5>G4</td> <td class="description-cell" data-astro-cid-mhkapny5>Disminución severa</td> <td class="range-cell" data-astro-cid-mhkapny5>15-29</td> <td class="status-cell red" data-astro-cid-mhkapny5>--</td> <td class="status-cell red" data-astro-cid-mhkapny5>--</td> <td class="status-cell red" data-astro-cid-mhkapny5>--</td> </tr> <tr data-astro-cid-mhkapny5> <td class="category-cell" data-astro-cid-mhkapny5>G5</td> <td class="description-cell" data-astro-cid-mhkapny5>Insuficiencia renal</td> <td class="range-cell" data-astro-cid-mhkapny5>&lt;15</td> <td class="status-cell dark-red" data-astro-cid-mhkapny5>--</td> <td class="status-cell dark-red" data-astro-cid-mhkapny5>--</td> <td class="status-cell dark-red" data-astro-cid-mhkapny5>--</td> </tr> </table> </div> <div class="grid grid-cols-2 text-xs sm:grid-cols-4 lg:text-[9px] lg:mt-4 xl:text-[12px] 2xl:text-base" data-astro-cid-mhkapny5> <div class="flex items-start gap-2" data-astro-cid-mhkapny5> <div class="w-3 h-3 bg-[#39b54a] 2xl:w-5 2xl:h-5" data-astro-cid-mhkapny5></div> <span class="font-helvetica-regular" data-astro-cid-mhkapny5>Riesgo bajo</span> </div> <div class="flex items-start gap-2" data-astro-cid-mhkapny5> <div class="w-3 h-3 bg-[#fcee21] 2xl:w-5 2xl:h-5" data-astro-cid-mhkapny5></div> <span class="font-helvetica-regular" data-astro-cid-mhkapny5>Riesgo moderadamente <br data-astro-cid-mhkapny5> aumentado</span> </div> <div class="flex items-start gap-2" data-astro-cid-mhkapny5> <div class="w-3 h-3 bg-[#f15a24] 2xl:w-5 2xl:h-5" data-astro-cid-mhkapny5></div> <span class="font-helvetica-regular" data-astro-cid-mhkapny5>Riesgo alto</span> </div> <div class="flex items-start gap-2" data-astro-cid-mhkapny5> <div class="w-3 h-3 bg-[#d50032] 2xl:w-5 2xl:h-5" data-astro-cid-mhkapny5></div> <span class="font-helvetica-regular" data-astro-cid-mhkapny5>Riesgo muy alto</span> </div> </div> </div>  <script type="module" src="/_astro/TablaRiesgo.astro_astro_type_script_index_0_lang.cupSslMQ.js"></script> </div> <div class="mt-8 px-8 flex flex-col gap-y-4 xl:px-16 2xl:px-80 2xl:gap-y-6" data-astro-cid-v5d7ckia> <div class="header-banner gradient-label py-3 px-4 font-helvetica-bold text-xs lg:text-lg lg:w-[100%] xl:text-2xl 2xl:text-3xl" data-astro-cid-v5d7ckia>
+Las guías KDIGO indican el inicio de un ARMns en pacientes con ERD con las
+        siguientes características:
+</div> <ul class="list-inside flex flex-col justify-between text-left text-xs font-helvetica-bold text-[#10384f] lg:flex-row lg:w-[100%] lg:text-base xl:text-lg 2xl:text-2xl" data-astro-cid-v5d7ckia> <li class="lower-roman" data-astro-cid-v5d7ckia>TFGe&gt;25ml/min/1.73m2 - Estadios G1 a G4</li> <li class="lower-roman" data-astro-cid-v5d7ckia>Albuminuria persistente &gt;30mg/g (A2-A3)</li> </ul>  </div> </div>  <footer class="mt-6 py-6 px-8 font-helvetica-regular grid grid-cols-4 gap-y-10 sm:bg-[#10384f] lg:mt-12 lg:pt-10 xl:px-16 lg:grid-cols-7 xl:gap-y-14 2xl:px-80" data-astro-cid-sz7xmlte> <div class="text-xs text-[#10384f] flex gap-y-4 flex-col col-span-4 sm:text-white lg:text-justify lg:col-span-7 xl:col-span-6 xl:text-[10px] 2xl:text-[12px]" data-astro-cid-sz7xmlte> <p data-astro-cid-sz7xmlte>
+Bayer hace constar que la responsabilidad de determinar la conducta terapéutica para cada paciente recae en el médico tratante y su equipo. Esta aplicación solo facilita el uso de estrategias de evaluación de riesgo. La
+            información proporcionada por la aplicación no debe utilizarse de manera aislada.
+</p> <p data-astro-cid-sz7xmlte>
+Referencia:<br data-astro-cid-sz7xmlte>
+KDIGO. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease, Kidney International (2024) 105 (Suppl 4S), S117–S31
+</p> <p data-astro-cid-sz7xmlte>
+A2-A3: Categorías de albuminuria moderada a severa, según las guías
+            KDIGO (A2: 30-300 mg/g, A3: &gt;300 mg/g); ARMns: Antagonistas del
+            Receptor de Mineralocorticoides no esteroideos; DT2: Diabetes Tipo
+            2; ERD: Enfermedad Renal Diabética. KDIGO: Kidney Disease: Improving
+            Global Outcomes. RAC: Relación Albúmina/Creatinina. TFGe: Tasa de
+            Filtración Glomerular Estimada
+</p> <p data-astro-cid-sz7xmlte>PP-Fi-CO-0150-1</p> <p data-astro-cid-sz7xmlte>
+Material Técnico/Científico dirigido exclusivamente a Profesionales
+            de la Salud.
+</p> <div data-astro-cid-sz7xmlte> <p data-astro-cid-sz7xmlte>
+Leyenda exclusiva para Costa Rica: Todo medicamento posee
+                efectos secundarios. Este medicamento requiere receta médica.
+</p> <p data-astro-cid-sz7xmlte>
+Para Perú: En el link adjunto se encuentra la ficha técnica de
+                producto aprobada por DIGEMID.
+<a href="https://go.bayer.com/FirialtaPE" target="_blank" rel="noopener noreferrer" class="underline" data-astro-cid-sz7xmlte>
+https://go.bayer.com/FirialtaPE
+</a> Firialta 10mg R:S: N°EE-11294; Firialta 20mg R:S: N° EE-11295,
+                RUC: 20100096341, Denominación Social: Bayer, S. A. En cumplimiento
+                de lo dispuesto en el artículo39 numeral 39.2 de la ley No. 32033
+                y los reglamentos correspondientes, puede informarse: respecto del
+                precio de venta disponible al consumidor consultando el OBSERVATORIO
+                DE PRECIOS de Perú en <a href="https://opm-digemid.minsa.gob.pe/#/consulta-producto" target="_blank" rel="noopener noreferrer" class="underline" data-astro-cid-sz7xmlte>
+https://opm-digemid.minsa.gob.pe/#/consulta-producto
+</a> ; y respecto a la calidad consultando el OBSERVATORIO DE CALIDAD
+                en <a href="https://observatorio.digemid.minsa.gob.pe/obscalidad/webform2" target="_blank" rel="noopener noreferrer" class="underline" data-astro-cid-sz7xmlte>
+https://observatorio.digemid.minsa.gob.pe/obscalidad/webform2
+</a> </p> </div> <p data-astro-cid-sz7xmlte>
+Leyenda exclusiva para Guatemala: Para uso exclusivo del Profesional
+            Médico
+</p> <p data-astro-cid-sz7xmlte>
+Leyenda exclusiva para R. Dominicana: Venta bajo receta médica.
+            Consulte a su médico.
+</p> <p data-astro-cid-sz7xmlte>
+Leyenda exclusiva para El Salvador: En caso de duda consulte a su
+            médico o farmacéutico.
+</p> <p data-astro-cid-sz7xmlte>
+Leyenda exclusiva para Panamá, Honduras y Nicaragua:Material
+            Técnico/Científico dirigido exclusivamente a Profesionales de la
+            salud.
+</p> <p data-astro-cid-sz7xmlte>
+Si desea informar o reportar un efecto adverso o un reclamo técnico
+            de producto asociado a un producto Bayer, por favor dirija sus
+            comentarios a su Autoridad Sanitaria Local y/o haciendo clic en: <a href="https://safetrack-public.bayer.com/" target="_blank" rel="noopener noreferrer" class="underline" data-astro-cid-sz7xmlte>
+https://safetrack-public.bayer.com/
+</a> </p> <p data-astro-cid-sz7xmlte>
+Bayer hace constar que la responsabilidad de determinar la conducta
+            terapéutica para cada paciente recae en el médico tratante y su
+            equipo. Esta aplicación solo facilita el uso de estrategias de
+            evaluación de riesgo. La información proporcionada por la aplicación
+            no debe utilizarse de manera aislada.
+</p> <p data-astro-cid-sz7xmlte>
+Bayer no se hace responsable del uso inadecuado de la información
+            proporcionada.
+</p> </div> <nav class="font-helvetica-regular text-white text-xs flex flex-col col-span-2 sm:flex-row sm:col-span-3 sm:gap-x-3 lg:col-span-5 lg:col-start-2 lg:self-center xl:col-span-7 lg:justify-self-center xl:text-[12px]" aria-label="Enlaces legales" data-astro-cid-sz7xmlte> <a href="https://www.bayer.com/es/co/andina-y-cac-politica-de-privacidad" target="_blank" rel="noopener noreferrer" class="hover:underline focus:outline-none focus:ring-2 focus:ring-[#89d329] transition-colors sm:border-r-2 sm:border-r-[#89d329] sm:pr-3" data-astro-cid-sz7xmlte>
+Política de privacidad
+</a> <a href="https://www.bayer.com/es/co/andina-y-cac-general-conditions-of-use" target="_blank" rel="noopener noreferrer" class="hover:underline focus:outline-none focus:ring-2 focus:ring-[#89d329] transition-colors sm:border-r-2 sm:border-r-[#89d329] sm:pr-3" data-astro-cid-sz7xmlte>
+Condiciones de uso
+</a> <a href="https://www.bayer.com/es/co/andina-y-cac-imprint" target="_blank" rel="noopener noreferrer" class="hover:underline focus:outline-none focus:ring-2 focus:ring-[#89d329] transition-colors sm:border-r-2 sm:border-r-[#89d329] sm:pr-3" data-astro-cid-sz7xmlte>
+Pie de Imprenta
+</a> <a href="https://www.bayer.com/es/co/andina-y-cac-reporte-de-efectos-adversos-o-reclamo-tecnico-de-producto" target="_blank" rel="noopener noreferrer" class="hover:underline focus:outline-none focus:ring-2 focus:ring-[#89d329] transition-colors sm:border-r-2 sm:border-r-[#89d329] sm:pr-3" data-astro-cid-sz7xmlte>
+Reportar efectos adversos
+</a> <a href="https://www.bayer.com/es/co/andina-y-cac-contacto" target="_blank" rel="noopener noreferrer" class="pr-3 hover:underline focus:outline-none focus:ring-2 focus:ring-[#89d329] transition-colors sm:border-r-2 sm:border-r-[#89d329] sm:pr-3" data-astro-cid-sz7xmlte>
+Contacto
+</a> </nav> <div class="w-full h-full flex justify-end items-end col-span-2 sm:col-span-1 xl:col-start-7 xl:row-start-1 xl:items-center" data-astro-cid-sz7xmlte> <img src="/_astro/BayerLogo.CM8MOdBp_wUD6R.webp" alt="bayer" data-astro-cid-sz7xmlte="true" loading="lazy" decoding="async" fetchpriority="auto" width="200" height="199" class="object-contain w-[50px] xl:w-[110px]"> </div> </footer>  </main>  </body></html>
+
+
+
